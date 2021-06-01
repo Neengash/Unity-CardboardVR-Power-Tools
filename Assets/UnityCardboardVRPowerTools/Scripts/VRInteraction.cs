@@ -24,6 +24,7 @@ public class VRInteraction : MonoBehaviour
 
         if (loadingCoroutine != null) {
             StopCoroutine(loadingCoroutine);
+            loadingCoroutine = null;
             VRPointerLoader.instance.resetLoad();
         }
     }
@@ -45,5 +46,12 @@ public class VRInteraction : MonoBehaviour
         onPointerLoad?.Invoke();
         loadingCoroutine = null;
         VRPointerLoader.instance.resetLoad();
+    }
+
+    private void OnDestroy() {
+        if (loadingCoroutine != null) {
+            loadingCoroutine = null;
+            VRPointerLoader.instance.resetLoad();
+        }
     }
 }
