@@ -20,7 +20,7 @@ public class VRPointer : MonoBehaviour
             gazedObject = null;
         }
 
-        if (Google.XR.Cardboard.Api.IsTriggerPressed || Input.GetButtonDown("Submit")) {
+        if (Google.XR.Cardboard.Api.IsTriggerPressed || Input.GetButtonDown("Fire1")) {
             if (gazedObject != null) { gazedObject?.OnPointerClick(); }
         }
     }
