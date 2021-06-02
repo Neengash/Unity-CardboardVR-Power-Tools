@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7fc6058d300aa41abe575a431e2d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActiveInteractions: 1
+  ActiveVRInteractions: 1
   pointerDistance: 20
 --- !u!114 &6114571547727754055
 MonoBehaviour:
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 20
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

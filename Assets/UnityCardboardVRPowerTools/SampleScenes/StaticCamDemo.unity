@@ -4604,6 +4604,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6114571547231735758, guid: 9b89ad8288d3ff646a717ba4355c33e7, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6114571547231735759, guid: 9b89ad8288d3ff646a717ba4355c33e7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4612,9 +4616,9 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6114571547727754054, guid: 9b89ad8288d3ff646a717ba4355c33e7, type: 3}
-      propertyPath: pointerDistance
-      value: 20
+    - target: {fileID: 6114571548641388843, guid: 9b89ad8288d3ff646a717ba4355c33e7, type: 3}
+      propertyPath: m_Value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6114571548915487920, guid: 9b89ad8288d3ff646a717ba4355c33e7, type: 3}
       propertyPath: m_RootOrder
@@ -4664,6 +4668,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseVRCamera
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6114571548989314801, guid: 9b89ad8288d3ff646a717ba4355c33e7, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b89ad8288d3ff646a717ba4355c33e7, type: 3}
