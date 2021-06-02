@@ -11,8 +11,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/UnityCardboardVRPowerTools/SampleScenes/StaticCamDemo.unity
     guid: f536499d5de10724ea8ebefc3d7f9aa0
-  - enabled: 1
+  - enabled: 0
     path: Assets/UnityCardboardVRPowerTools/SampleScenes/FreeMovementCamDemo.unity
     guid: 6ee76c8fcd96b32498841b127344e6ce
+  - enabled: 1
+    path: Assets/UnityCardboardVRPowerTools/SampleScenes/SpotsMovementCamDemo.unity
+    guid: a64f56bf7d51d254fb4e6a43863e170b
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 99f7d6b230caa464cb247f51570929ab, type: 2}
