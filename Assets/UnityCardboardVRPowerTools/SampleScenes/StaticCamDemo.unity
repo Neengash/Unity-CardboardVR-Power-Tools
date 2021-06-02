@@ -4543,10 +4543,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2041516099}
     m_Modifications:
-    - target: {fileID: 1279486367719205896, guid: aaabb57331335414384da9165e3091e7, type: 3}
-      propertyPath: LoadTime
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2647218447442971971, guid: aaabb57331335414384da9165e3091e7, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -4604,20 +4600,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6114571547231735758, guid: 9b89ad8288d3ff646a717ba4355c33e7, type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6114571547231735759, guid: 9b89ad8288d3ff646a717ba4355c33e7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6114571547231735759, guid: 9b89ad8288d3ff646a717ba4355c33e7, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6114571548641388843, guid: 9b89ad8288d3ff646a717ba4355c33e7, type: 3}
-      propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6114571548915487920, guid: 9b89ad8288d3ff646a717ba4355c33e7, type: 3}
