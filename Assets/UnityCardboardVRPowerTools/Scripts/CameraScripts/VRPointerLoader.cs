@@ -10,7 +10,7 @@ public class VRPointerLoader : MonoBehaviour
     {
         instance = this;
         //loadingSlider.maxValue = 1f;
-        //loadingSlider.value = 0f;
+        loadingSlider.value = 0f;
     }
 
     public void SetMaxLoad(float maxLoad) {
