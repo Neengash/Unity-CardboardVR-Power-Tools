@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "762dd80a",
+    "m_SelectedDeviceId": "TJ086414",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "TJ086414",
+        "name": "com.Neengash.UnityCardboardVRPowerTools",
+        "processId": 30994,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -37,6 +37,18 @@
             "name": "com.Neengash.UnityCardboardVRPowerTools",
             "processId": 12699,
             "exited": true
+        },
+        {
+            "deviceId": "TJ086414",
+            "name": "com.Neengash.UnityCardboardVRPowerTools",
+            "processId": 30790,
+            "exited": false
+        },
+        {
+            "deviceId": "TJ086414",
+            "name": "com.Neengash.UnityCardboardVRPowerTools",
+            "processId": 30994,
+            "exited": false
         }
     ],
     "m_Tags": {
