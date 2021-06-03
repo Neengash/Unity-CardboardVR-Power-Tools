@@ -7,8 +7,7 @@ using System.Collections;
 public class VRMenu : MonoBehaviour
 {
     [SerializeField] bool FollowCamera = true;
-    [SerializeField] Transform VRCameraTransform;
-    [SerializeField] Transform ownTransform;
+    [SerializeField] Transform VRCameraTransform, ownTransform;
     [SerializeField] Camera m_camera;
 
     [SerializeField] GraphicRaycaster m_Raycaster;
@@ -16,6 +15,8 @@ public class VRMenu : MonoBehaviour
     EventSystem m_EventSystem;
 
     List<GameObject> hits, previousHits;
+    VRInteraction gazedObject;
+    VRInteraction hit;
 
     private void Start() {
         hits = new List<GameObject>();
@@ -24,57 +25,53 @@ public class VRMenu : MonoBehaviour
     }
 
     private void Update() {
+        //Might fix problems with mouse interaction
+        //m_PointerEventData.Reset();
         m_PointerEventData = new PointerEventData(m_EventSystem);
         m_PointerEventData.position = new Vector2(m_camera.pixelWidth / 2, m_camera.pixelHeight / 2);
-
         List<RaycastResult> results = new List<RaycastResult>();
         m_Raycaster.Raycast(m_PointerEventData, results);
 
-        hits.Clear();
+        hit = null;
         foreach (RaycastResult result in results) {
-            hits.Add(result.gameObject);
-        }
-
-        CheckPointerExit(hits, previousHits);
-        CheckPointerEnter(hits, previousHits);
-
-        if (Google.XR.Cardboard.Api.IsTriggerPressed || Input.GetButtonDown("Fire1")) {
-            CheckPointerClick(hits);
-        }
-
-        UpdatePreviousHits(hits);
-    }
-
-    private void CheckPointerEnter(List<GameObject> hits, List<GameObject> prevHits) {
-        foreach (GameObject hit in hits) {
-            if (!prevHits.Contains(hit)) {
-                VRInteraction element = hit.GetComponent<VRInteraction>();
-                element?.OnPointerEnter();
+            if (result.gameObject.GetComponent<VRInteraction>()) {
+                hit = result.gameObject.GetComponent<VRInteraction>();
             }
         }
-    }
 
-    private void CheckPointerExit(List<GameObject> hits, List<GameObject> prevHits) {
-        foreach (GameObject prevHit in prevHits) {
-            if (!hits.Contains(prevHit)) {
-                VRInteraction element = prevHit.GetComponent<VRInteraction>();
-                element?.OnPointerExit();
+        if (hit != null) {
+            ObjectInSight(hit);
+            if (
+                Google.XR.Cardboard.Api.IsTriggerPressed || 
+                Input.GetButton("Fire1")
+            ) {
+                ObjectInteraction(hit);
             }
+        } else if (gazedObject != null) {
+            NoObjectInSight();
         }
     }
 
-    private void CheckPointerClick(List<GameObject> hits) {
-        foreach (GameObject hit in hits) {
-            VRInteraction element = hit.GetComponent<VRInteraction>();
-            element?.OnPointerClick();
+    private void ObjectInSight(VRInteraction hit) {
+        if (hit != gazedObject) {
+            if (gazedObject != null) { gazedObject?.OnPointerExit(); }
+            gazedObject = hit;
+            gazedObject?.OnPointerEnter();
         }
+        VRPointer.instance.SetColor(gazedObject.holdColor);
     }
 
-    private void UpdatePreviousHits(List<GameObject> hits) {
-        previousHits.Clear();
+    private void NoObjectInSight() {
+        if (gazedObject != null) { gazedObject?.OnPointerExit(); }
+        gazedObject = null;
 
-        foreach (GameObject hit in hits) {
-            previousHits.Add(hit);
+        VRPointer.instance.SetColor();
+    }
+
+    private void ObjectInteraction(VRInteraction hit) {
+        if (gazedObject != null) {
+            gazedObject.OnPointerClick();
+            VRPointer.instance.SetColor(gazedObject.clickColor);
         }
     }
 

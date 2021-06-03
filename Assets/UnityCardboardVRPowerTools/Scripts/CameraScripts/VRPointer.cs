@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class VRPointer : MonoBehaviour
 {
     public bool ActiveVRInteractions = true;
+    public static VRPointer instance;
 
     [SerializeField] private float pointerDistance = 5;
     [SerializeField] Color baseColor = new Color(1f, 1f, 1f, 1f);
@@ -11,6 +12,10 @@ public class VRPointer : MonoBehaviour
 
     private VRInteraction gazedObject = null;
     private RaycastHit hit;
+
+    private void Awake() {
+        instance = this;
+    }
 
     void Update() {
         if (ActiveVRInteractions) {
@@ -37,23 +42,24 @@ public class VRPointer : MonoBehaviour
             gazedObject?.OnPointerEnter(); 
         }
 
-        pointerImg.color = gazedObject != null
-            ? gazedObject.holdColor
-            : baseColor;
+        SetColor(gazedObject != null ? gazedObject.holdColor : baseColor);
     }
 
     void NoObjectInSight() {
         gazedObject?.OnPointerExit();
         gazedObject = null;
 
-        pointerImg.color = baseColor;
+        SetColor();
     }
 
     void ObjectInteraction() {
         if (gazedObject != null) {
             gazedObject?.OnPointerClick();
 
-            pointerImg.color = gazedObject.clickColor;
+            SetColor(gazedObject.clickColor);
         }
     }
+    
+    public void SetColor() { pointerImg.color = baseColor; }
+    public void SetColor(Color color) { pointerImg.color = color; }
 }
