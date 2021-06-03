@@ -6,6 +6,9 @@ public class VRInteraction : MonoBehaviour
 {
     [SerializeField, Range(0.5f, 10f)]
     private float LoadTime = 2f;
+
+    [SerializeField] public Color holdColor = new Color(.9f, .9f, .9f, 1f);
+    [SerializeField] public Color clickColor = new Color(.5f, .5f, .5f, 1f);
     Coroutine loadingCoroutine;
 
     [SerializeField]

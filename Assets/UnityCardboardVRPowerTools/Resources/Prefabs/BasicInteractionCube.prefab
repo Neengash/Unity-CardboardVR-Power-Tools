@@ -128,6 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadTime: 1
+  holdColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
+  clickColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
   onPointerEnter:
     m_PersistentCalls:
       m_Calls: []
