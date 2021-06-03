@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "762dd80a",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "762dd80a",
+        "name": "com.Neengash.UnityCardboardVRPowerTools",
+        "processId": 12699,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -37,6 +37,24 @@
             "name": "com.Neengash.UnityCardboardVRPowerTools",
             "processId": 692,
             "exited": true
+        },
+        {
+            "deviceId": "762dd80a",
+            "name": "com.Neengash.UnityCardboardVRPowerTools",
+            "processId": 6509,
+            "exited": true
+        },
+        {
+            "deviceId": "762dd80a",
+            "name": "com.twitter.android",
+            "processId": 27802,
+            "exited": false
+        },
+        {
+            "deviceId": "762dd80a",
+            "name": "com.Neengash.UnityCardboardVRPowerTools",
+            "processId": 12699,
+            "exited": false
         }
     ],
     "m_Tags": {
