@@ -1,36 +1,18 @@
 {
     "m_SelectedDeviceId": "762dd80a",
     "m_SelectedPackage": {
-        "deviceId": "762dd80a",
-        "name": "com.Neengash.UnityCardboardVRPowerTools",
-        "processId": 12699,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "762dd80a",
-            "name": "com.Neengash.UnityCardboardVRPowerTools",
-            "processId": 29360,
-            "exited": true
-        },
-        {
-            "deviceId": "762dd80a",
-            "name": "com.Neengash.UnityCardboardVRPowerTools",
-            "processId": 30269,
-            "exited": true
-        },
-        {
-            "deviceId": "762dd80a",
-            "name": "com.Neengash.UnityCardboardVRPowerTools",
-            "processId": 31687,
-            "exited": true
-        },
-        {
-            "deviceId": "762dd80a",
             "name": "com.miui.home",
             "processId": 3624,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "762dd80a",
@@ -48,13 +30,13 @@
             "deviceId": "762dd80a",
             "name": "com.twitter.android",
             "processId": 27802,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "762dd80a",
             "name": "com.Neengash.UnityCardboardVRPowerTools",
             "processId": 12699,
-            "exited": false
+            "exited": true
         }
     ],
     "m_Tags": {

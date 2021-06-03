@@ -1520,6 +1520,7 @@ GameObject:
   - component: {fileID: 1404508030}
   - component: {fileID: 1404508029}
   - component: {fileID: 1404508028}
+  - component: {fileID: 1404508033}
   m_Layer: 5
   m_Name: Button3
   m_TagString: Untagged
@@ -1570,7 +1571,19 @@ MonoBehaviour:
       m_Calls: []
   onPointerClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1404508033}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_MethodName: writeSentence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPointerLoad:
     m_PersistentCalls:
       m_Calls: []
@@ -1669,6 +1682,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404508026}
   m_CullTransparentMesh: 1
+--- !u!114 &1404508033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404508026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42568106a2de71a4a9811a3f019937b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentence: 'This is a sample text
+
+    It can hold up to 3 sentences
+
+    This is
+    the last sentence.'
 --- !u!224 &1405586046 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8106452294072939155, guid: 9fe04ad460180da4db9577cf176c26c3, type: 3}
