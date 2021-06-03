@@ -17,7 +17,7 @@ public class VRInteraction : MonoBehaviour
     public void OnPointerEnter() {
         onPointerEnter?.Invoke();
 
-        if (onPointerLoad != null) {
+        if (onPointerLoad.GetPersistentEventCount() > 0) {
             loadingCoroutine = StartCoroutine(Loading());
         }
     }
