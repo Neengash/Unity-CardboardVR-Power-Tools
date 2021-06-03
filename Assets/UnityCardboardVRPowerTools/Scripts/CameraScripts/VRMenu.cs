@@ -50,7 +50,6 @@ public class VRMenu : MonoBehaviour
             if (!prevHits.Contains(hit)) {
                 VRInteraction element = hit.GetComponent<VRInteraction>();
                 element?.OnPointerEnter();
-                Debug.Log("Entered - " + element.name);
             }
         }
     }
@@ -60,7 +59,6 @@ public class VRMenu : MonoBehaviour
             if (!hits.Contains(prevHit)) {
                 VRInteraction element = prevHit.GetComponent<VRInteraction>();
                 element?.OnPointerExit();
-                Debug.Log("Exited - " + element.name);
             }
         }
     }
@@ -69,7 +67,6 @@ public class VRMenu : MonoBehaviour
         foreach (GameObject hit in hits) {
             VRInteraction element = hit.GetComponent<VRInteraction>();
             element?.OnPointerClick();
-            Debug.Log("Clicked - " + element.name);
         }
     }
 
