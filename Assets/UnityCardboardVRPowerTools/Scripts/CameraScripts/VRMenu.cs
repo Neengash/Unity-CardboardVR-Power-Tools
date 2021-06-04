@@ -41,10 +41,7 @@ public class VRMenu : MonoBehaviour
 
         if (hit != null) {
             ObjectInSight(hit);
-            if (
-                Google.XR.Cardboard.Api.IsTriggerPressed || 
-                Input.GetButton("Fire1")
-            ) {
+            if (Input.GetButtonDown("Fire1")) {
                 ObjectInteraction(hit);
             }
         } else if (gazedObject != null) {

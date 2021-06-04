@@ -26,7 +26,7 @@ public class VRPointer : MonoBehaviour
     void RaycastInteractions() {
         if (Physics.Raycast(transform.position, transform.forward, out hit, pointerDistance)) {
             ObjectInSight();
-            if (Google.XR.Cardboard.Api.IsTriggerPressed || Input.GetButton("Fire1")) {
+            if (Input.GetButtonDown("Fire1")) {
                 ObjectInteraction();
             }
         } else {

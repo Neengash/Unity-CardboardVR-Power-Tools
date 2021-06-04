@@ -13,12 +13,8 @@ public class CameraMovementTouch : MonoBehaviour
     [SerializeField, Range(0.5f, 10f)]
     float cameraSpeed;
 
-    void Update()
-    {
-        if (
-            Google.XR.Cardboard.Api.IsTriggerPressed || 
-            Input.GetButton("Fire1")
-        ) {
+    void Update() {
+        if (Input.GetButton("Fire1")) {
             DoMovement();
         }
     }
