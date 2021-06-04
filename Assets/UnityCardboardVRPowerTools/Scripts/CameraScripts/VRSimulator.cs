@@ -1,4 +1,3 @@
-#if UNITY_EDITOR
 using Google.XR.Cardboard;
 using UnityEngine.XR.Management;
 using System.Collections;
@@ -6,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SpatialTracking;
 
-public class EditorVRSimulator : MonoBehaviour
+public class VRSimulator : MonoBehaviour
 {
     [SerializeField, Range(.05f, 2)]
     float dragRate = .2f;
@@ -29,7 +28,7 @@ public class EditorVRSimulator : MonoBehaviour
 
     void SimulateVR() {
         var mousePos = Input.mousePosition;
-        if (Input.GetKey(KeyCode.LeftAlt)) {
+        if (Input.GetKey(KeyCode.Z)) {
             var delta = mousePos - lastMousePos;
             dragDegrees.x -= delta.y * dragRate;
             dragDegrees.y -= delta.x * dragRate;
@@ -37,4 +36,3 @@ public class EditorVRSimulator : MonoBehaviour
         lastMousePos = mousePos;
     }
 }
-#endif

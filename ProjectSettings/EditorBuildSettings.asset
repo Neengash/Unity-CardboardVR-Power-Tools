@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.5.0/Hello Cardboard/Scenes/HelloCardboard.unity
-    guid: 145a2a45d7bc746b19cb68410368bf96
-  - enabled: 0
     path: Assets/UnityCardboardVRPowerTools/SampleScenes/StaticCamDemo.unity
     guid: f536499d5de10724ea8ebefc3d7f9aa0
   - enabled: 0
