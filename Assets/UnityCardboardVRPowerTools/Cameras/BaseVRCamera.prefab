@@ -354,7 +354,7 @@ MonoBehaviour:
   ActiveVRInteractions: 1
   pointerDistance: 20
   baseColor: {r: 1, g: 1, b: 1, a: 1}
-  pointerImg: {fileID: 0}
+  pointerImg: {fileID: 6114571548935833048}
 --- !u!114 &6114571547727754055
 MonoBehaviour:
   m_ObjectHideFlags: 0
